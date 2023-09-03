@@ -1,0 +1,33 @@
+// EDIT IT, change to your package, service and message
+syntax = "proto3";
+package api;
+
+option go_package = "./;api";
+
+// 定义公共的接口（只定义，不实现接口）
+service Generator1 {
+  rpc GetID (GenReq) returns (GenResp) {}
+}
+
+message GenReq {
+  string appId = 1;
+  int32 appAge = 2;
+}
+
+message GenResp {
+  string id = 1;
+  string name = 2;
+  int32 age = 3;
+}
+
+service Xtest {
+  rpc GetUser (XtestReq) returns (XtestResp) {}
+}
+message XtestReq {
+  string name = 1;
+}
+message XtestResp {
+  string name = 1;
+  int32 age = 2;
+  string sex = 3;
+}

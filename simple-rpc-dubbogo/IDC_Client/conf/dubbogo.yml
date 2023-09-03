@@ -1,0 +1,13 @@
+dubbo:
+  registries:
+    nacos:
+      protocol: nacos
+      address: 127.0.0.1:8848
+  consumer:
+    references:
+      Generator1ClientImpl:
+        protocol: tri
+        interface: "" # 设置为对应的接口名称
+      XtestClientImpl:
+        protocol: tri
+        interface: "" # 设置为对应的接口名称

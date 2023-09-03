@@ -1,0 +1,108 @@
+2023-09-03 00:45:40,069 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:api.Generator::, region: unknown, msg: client last beat: 1693672172611
+
+2023-09-03 00:45:40,082 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:api.Xtest::, region: unknown, msg: client last beat: 1693672172611
+
+2023-09-03 00:45:40,083 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:grpc.reflection.v1alpha.ServerReflection::, region: unknown, msg: client last beat: 1693672172611
+
+2023-09-03 03:07:49,098 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:api.Generator::, region: unknown, msg: client last beat: 1693681471779
+
+2023-09-03 03:07:49,111 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:api.Xtest::, region: unknown, msg: client last beat: 1693681471779
+
+2023-09-03 03:07:49,112 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:grpc.reflection.v1alpha.ServerReflection::, region: unknown, msg: client last beat: 1693681471779
+
+2023-09-03 03:18:31,260 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:api.Generator::, region: unknown, msg: client last beat: 1693681721832
+
+2023-09-03 03:18:31,263 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:api.Xtest::, region: unknown, msg: client last beat: 1693681721815
+
+2023-09-03 03:18:31,263 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:grpc.reflection.v1alpha.ServerReflection::, region: unknown, msg: client last beat: 1693681721815
+
+2023-09-03 05:52:04,231 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:api.Generator::, region: unknown, msg: client last beat: 1693690588669
+
+2023-09-03 05:52:04,252 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:api.Xtest::, region: unknown, msg: client last beat: 1693690588669
+
+2023-09-03 05:52:04,252 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:grpc.reflection.v1alpha.ServerReflection::, region: unknown, msg: client last beat: 1693690588670
+
+2023-09-03 08:05:47,530 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:api.Generator::, region: unknown, msg: client last beat: 1693699530331
+
+2023-09-03 08:05:47,542 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:api.Xtest::, region: unknown, msg: client last beat: 1693699530332
+
+2023-09-03 08:05:47,542 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:grpc.reflection.v1alpha.ServerReflection::, region: unknown, msg: client last beat: 1693699530331
+
+2023-09-03 08:05:47,678 INFO service: DEFAULT_GROUP@@providers:grpc.reflection.v1alpha.ServerReflection:: {POS} {IP-ENABLED} valid: 192.168.2.104:20000@DEFAULT, region: unknown, msg: client beat ok
+
+2023-09-03 08:05:47,680 INFO service: DEFAULT_GROUP@@providers:api.Generator:: {POS} {IP-ENABLED} valid: 192.168.2.104:20000@DEFAULT, region: unknown, msg: client beat ok
+
+2023-09-03 08:05:47,681 INFO service: DEFAULT_GROUP@@providers:api.Xtest:: {POS} {IP-ENABLED} valid: 192.168.2.104:20000@DEFAULT, region: unknown, msg: client beat ok
+
+2023-09-03 08:07:52,867 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:api.Generator::, region: unknown, msg: client last beat: 1693699605014
+
+2023-09-03 08:07:52,891 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:api.Xtest::, region: unknown, msg: client last beat: 1693699604992
+
+2023-09-03 08:07:52,892 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:grpc.reflection.v1alpha.ServerReflection::, region: unknown, msg: client last beat: 1693699604995
+
+2023-09-03 09:09:30,905 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:api.Generator::, region: unknown, msg: client last beat: 1693703328702
+
+2023-09-03 09:09:30,923 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:api.Xtest::, region: unknown, msg: client last beat: 1693703328704
+
+2023-09-03 09:09:30,924 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:grpc.reflection.v1alpha.ServerReflection::, region: unknown, msg: client last beat: 1693703328704
+
+2023-09-03 09:19:42,381 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:api.Generator::, region: unknown, msg: client last beat: 1693703845514
+
+2023-09-03 09:19:42,383 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:api.Xtest::, region: unknown, msg: client last beat: 1693703845514
+
+2023-09-03 09:19:42,383 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:grpc.reflection.v1alpha.ServerReflection::, region: unknown, msg: client last beat: 1693703845514
+
+2023-09-03 11:08:03,084 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:80@DEFAULT@consumers:api.Generator::, region: unknown, msg: client last beat: 1693710463202
+
+2023-09-03 11:12:25,969 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:80@DEFAULT@consumers:api.Generator::, region: unknown, msg: client last beat: 1693710726333
+
+2023-09-03 11:17:05,838 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:80@DEFAULT@consumers:api.Generator::, region: unknown, msg: client last beat: 1693711008235
+
+2023-09-03 11:17:41,839 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:80@DEFAULT@consumers:api.Generator::, region: unknown, msg: client last beat: 1693711041847
+
+2023-09-03 11:21:10,619 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:80@DEFAULT@consumers:api.Generator::, region: unknown, msg: client last beat: 1693711250620
+
+2023-09-03 11:24:03,356 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:80@DEFAULT@consumers:api.Generator::, region: unknown, msg: client last beat: 1693711423373
+
+2023-09-03 11:24:28,368 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:80@DEFAULT@consumers:api.Generator::, region: unknown, msg: client last beat: 1693711448667
+
+2023-09-03 11:28:35,882 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:80@DEFAULT@consumers:api.Generator::, region: unknown, msg: client last beat: 1693711695885
+
+2023-09-03 11:32:05,949 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:80@DEFAULT@consumers:api.Generator::, region: unknown, msg: client last beat: 1693711905958
+
+2023-09-03 11:32:45,976 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:80@DEFAULT@consumers:api.Generator1::, region: unknown, msg: client last beat: 1693711950168
+
+2023-09-03 11:33:15,994 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:80@DEFAULT@consumers:api.Generator1::, region: unknown, msg: client last beat: 1693711977933
+
+2023-09-03 11:34:49,362 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:80@DEFAULT@consumers:api.Generator1::, region: unknown, msg: client last beat: 1693712069364
+
+2023-09-03 11:44:37,300 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:80@DEFAULT@consumers:api.Generator1::, region: unknown, msg: client last beat: 1693712657312
+
+2023-09-03 11:44:37,301 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:80@DEFAULT@consumers:api.Xtest::, region: unknown, msg: client last beat: 1693712657416
+
+2023-09-03 12:11:39,375 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:api.Generator1::, region: unknown, msg: client last beat: 1693713336414
+
+2023-09-03 12:11:39,385 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:api.Xtest::, region: unknown, msg: client last beat: 1693713336417
+
+2023-09-03 12:11:39,386 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:grpc.reflection.v1alpha.ServerReflection::, region: unknown, msg: client last beat: 1693713336417
+
+2023-09-03 13:01:03,967 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:api.Generator1::, region: unknown, msg: client last beat: 1693717235403
+
+2023-09-03 13:01:03,968 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:api.Xtest::, region: unknown, msg: client last beat: 1693717235406
+
+2023-09-03 13:01:03,969 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:20000@DEFAULT@providers:grpc.reflection.v1alpha.ServerReflection::, region: unknown, msg: client last beat: 1693717235417
+
+2023-09-03 13:01:04,097 INFO service: DEFAULT_GROUP@@providers:api.Xtest:: {POS} {IP-ENABLED} valid: 192.168.2.104:20000@DEFAULT, region: unknown, msg: client beat ok
+
+2023-09-03 13:01:04,097 INFO service: DEFAULT_GROUP@@providers:api.Generator1:: {POS} {IP-ENABLED} valid: 192.168.2.104:20000@DEFAULT, region: unknown, msg: client beat ok
+
+2023-09-03 13:01:04,109 INFO service: DEFAULT_GROUP@@providers:grpc.reflection.v1alpha.ServerReflection:: {POS} {IP-ENABLED} valid: 192.168.2.104:20000@DEFAULT, region: unknown, msg: client beat ok
+
+2023-09-03 13:24:49,578 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:80@DEFAULT@consumers:api.Generator1::, region: unknown, msg: client last beat: 1693718669593
+
+2023-09-03 13:24:49,579 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:80@DEFAULT@consumers:api.Xtest::, region: unknown, msg: client last beat: 1693718669600
+
+2023-09-03 13:45:26,856 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:80@DEFAULT@consumers:api.Generator1::, region: unknown, msg: client last beat: 1693719906864
+
+2023-09-03 13:45:26,856 INFO {POS} {IP-DISABLED} valid: 192.168.2.104:80@DEFAULT@consumers:api.Xtest::, region: unknown, msg: client last beat: 1693719906966
+

@@ -1,0 +1,16 @@
+dubbo:
+  registries:
+    nacos:
+      protocol: nacos
+      address: 127.0.0.1:8848
+  # 指定使用 Dubbo 协议，如果端口设置为 -1，表示随机分配可用端口
+  protocols:
+    triple:
+      name: tri
+      port: 20000
+  provider:
+    services:
+      Generator1ServerImpl:
+        interface: "" # read from stub
+      XtestServerImpl:
+        interface: ""
