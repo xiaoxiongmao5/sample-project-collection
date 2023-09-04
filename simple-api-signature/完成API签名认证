@@ -5,6 +5,7 @@
 1. 先启动服务端
     ```bash
     cd Service
+    go mod tidy
     go run main.go
     ```
 2. 运行客户端的单元测试
