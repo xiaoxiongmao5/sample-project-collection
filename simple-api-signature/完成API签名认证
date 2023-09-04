@@ -1,0 +1,22 @@
+# 完成API签名认证
+
+## 使用步骤
+
+1. 先启动服务端
+    ```bash
+    cd Service
+    go run main.go
+    ```
+2. 运行客户端的单元测试
+    ```bash
+    cd Client
+    go test -v 
+    ```
+    输出如下代表成功:
+    ```txt
+    === RUN   TestSendApi
+    SUCCESS: statusCode=200 contentType=application/json; charset=utf-8, bodyBytes={"data":"GET 你的名字是xxx123"} 
+    --- PASS: TestSendApi (0.00s)
+    PASS
+    ok      simple/api-signature/client     0.336s
+    ```
