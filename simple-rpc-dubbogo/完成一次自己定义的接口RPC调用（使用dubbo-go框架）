@@ -1,0 +1,20 @@
+# 完成一次自己定义的接口RPC调用（使用dubbo-go框架）
+
+## 使用步骤
+
+1. 先启动 nacos
+    ```bash
+    cd nacos
+    docker compose up
+    ```
+    访问 http://127.0.0.1:8848/nacos/index.html 去 nacos 注册中心看一下（默认用户名和密码都是 nacos）
+2. 启动服务端
+    ```bash
+    cd IDC_Service
+    go run cmd/app.go  
+    ```
+3. 客户端使用
+    ```bash
+    cd IDC_Client
+    go run cmd/client.go
+    ```

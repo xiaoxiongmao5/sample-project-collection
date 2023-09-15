@@ -7,7 +7,7 @@ dubbo:
   protocols:
     triple:
       name: tri
-      port: 20000
+      port: 20001
   provider:
     services:
       Generator1ServerImpl:
