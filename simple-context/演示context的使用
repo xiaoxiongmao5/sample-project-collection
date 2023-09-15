@@ -1,0 +1,39 @@
+// Context的结构
+type Context interface {
+	Deadline() (deadline time.Time, ok bool)
+	Done() <-chan struct{}
+	Err() error
+	Value(key any) any
+}
+
+// 当调用Deadline时，会关闭这个管道，Err() 里面就会保留这个管道为什么会关闭，信息回保存在error里面
+// Value 可以把context当成一个map来使用，往里面添加若干个key value对，调用Value，把Key传进来，Key value是any类型，可以放任意类型
+
+// go的源码中给了一个Context的空的实现
+type emptyCtx int
+
+func (*emptyCtx) Deadline() (deadline time.Time, ok bool) {
+	return
+}
+func (*emptyCtx) Done() <-chan struct{} {
+	return nil
+}
+func (*emptyCtx) Err() error {
+	return nil
+}
+func (*emptyCtx) Value(key any) any {
+	return nil
+}
+
+// go 还给了bakground和todo
+var (
+	background = new(emptyCtx)
+	todo       = new(emptyCtx)
+)
+
+func Background() Context {
+	return background
+}
+func TODO() Context {
+	return todo
+}
