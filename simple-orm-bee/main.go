@@ -2,9 +2,8 @@
  * @Author: 小熊 627516430@qq.com
  * @Date: 2023-09-28 13:55:09
  * @LastEditors: 小熊 627516430@qq.com
- * @LastEditTime: 2023-09-28 15:47:22
+ * @LastEditTime: 2023-09-28 16:11:53
  * @FilePath: /simple-orm-bee/main.go
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 package main
 
@@ -18,25 +17,6 @@ import (
 	beego "github.com/beego/beego/v2/server/web"
 	_ "github.com/go-sql-driver/mysql"
 )
-
-// CREATE TABLE `user` (
-//
-//		`id` bigint NOT NULL AUTO_INCREMENT COMMENT 'id',
-//		`userName` varchar(256) DEFAULT NULL COMMENT '用户昵称',
-//		`userAccount` varchar(256) NOT NULL COMMENT '账号',
-//		`userAvatar` varchar(1024) DEFAULT NULL COMMENT '用户头像',
-//		`gender` tinyint DEFAULT NULL COMMENT '性别',
-//		`userRole` varchar(256) NOT NULL DEFAULT 'user' COMMENT '用户角色：user / admin',
-//		`userPassword` varchar(512) NOT NULL COMMENT '密码',
-//		`accessKey` varchar(512) NOT NULL COMMENT 'accessKey',
-//		`secretKey` varchar(512) NOT NULL COMMENT 'secretKey',
-//		`createTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-//		`updateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
-//		`isDelete` tinyint NOT NULL DEFAULT '0' COMMENT '是否删除',
-//		PRIMARY KEY (`id`),
-//		UNIQUE KEY `uni_userAccount` (`userAccount`)
-//	  ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='用户'
-//
 
 // User -
 type User struct {
@@ -104,7 +84,7 @@ func main() {
 
 	// 创建了一个新的 User 模型对象，准备插入到数据库中。
 	user := new(User)
-	user.UserAccount = "huahua2"
+	user.UserAccount = "xiaoxiong"
 
 	// 执行数据库插入操作，将 user 对象插入到数据库中。num 变量表示插入的记录数，err 变量表示操作中的任何错误。
 	num, err := o.Insert(user)
