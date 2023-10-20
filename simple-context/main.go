@@ -6,6 +6,8 @@ import (
 	"time"
 )
 
+// golang context 上下文管理 context.Background() 介绍：https://www.cnblogs.com/wordgao/p/15735147.html
+
 // 演示 context.Value() 的使用
 
 func step1(ctx context.Context) context.Context {
