@@ -2,7 +2,7 @@
  * @Author: 小熊 627516430@qq.com
  * @Date: 2023-09-28 13:55:09
  * @LastEditors: 小熊 627516430@qq.com
- * @LastEditTime: 2023-09-28 23:52:31
+ * @LastEditTime: 2023-09-29 15:57:15
  * @FilePath: /simple-orm-bee/main.go
  */
 package main
@@ -21,7 +21,7 @@ import (
 // User -
 type User struct {
 	//orm 为字段设置 DB 列的名称
-	ID           int       `orm:"column(id);auto"`            //auto显示指定一个字段为自增主键，该字段必须是 int, int32, int64, uint, uint32, 或者 uint64
+	ID           int64     `orm:"column(id);auto"`            //auto显示指定一个字段为自增主键，该字段必须是 int, int32, int64, uint, uint32, 或者 uint64
 	UserAccount  string    `orm:"column(userAccount);unique"` //为单个字段增加 unique键
 	AccessKey    string    `orm:"column(accessKey);index"`    //为单个字段增加索引
 	SecretKey    string    `orm:"column(secretKey)"`
@@ -84,12 +84,19 @@ func main() {
 	// 将默认值过滤器链添加到全局过滤器链中，以便在插入数据时应用默认值过滤器。
 	orm.AddGlobalFilterChain(builder.FilterChain)
 
-	id := Add()
+	// id := Add()
+	var id int64 = 2
 
 	userinfo, err := GetById(id)
 	if err == nil {
-		fmt.Println("userinfo=", userinfo)
+		fmt.Println("更新前: GetById userinfo=", userinfo)
 	}
+
+	UpdateById(100)
+	// userinfo, err = GetById(id)
+	// if err == nil {
+	// 	fmt.Println("更新后: GetById userinfo=", userinfo)
+	// }
 
 	beego.Run()
 }
@@ -132,7 +139,23 @@ func Add() int64 {
 	num, err := O.Insert(user)
 	if err != nil {
 		fmt.Println("数据库插入操作失败[o.Insert(user)] err=", err.Error())
+		return -1
 	}
 	fmt.Println("数据库插入操作成功[o.Insert(user) succeed] num=", num)
+	return num
+}
+
+func UpdateById(id int64) int64 {
+	// userObj, _ := GetById(id)
+	// userObj.UserName = "小熊猫"
+	userObj := &User{
+		ID: id,
+	}
+	num, err := O.Update(userObj) //注意这里不能是 var userInfo User，否则报错
+	if err != nil {
+		fmt.Println("数据库 UpdateById 操作失败[o.Insert(user)] err=", err.Error())
+		return -1
+	}
+	fmt.Println("数据库 UpdateById 操作成功[o.Insert(user) succeed] num=", num)
 	return num
 }
