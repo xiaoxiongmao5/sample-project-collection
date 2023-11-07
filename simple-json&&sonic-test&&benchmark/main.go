@@ -19,10 +19,13 @@ type Class struct {
 	Students []Student
 }
 
+var (
+	s = Student{"小花", 18, true}
+	c = Class{"1(2)班", []Student{s, s, s}}
+)
+
 func UseJson() {
 	start := time.Now()
-	s := Student{"小花", 18, true}
-	c := Class{"1(2)班", []Student{s, s, s}}
 
 	bytearr, err := json.Marshal(c) //JSON 序列化
 	if err != nil {
@@ -45,8 +48,6 @@ func UseJson() {
 // 字节跳动研发的JSON序列化反序列化工具，比Go官方的性能上快很多
 func UseSonic() {
 	start := time.Now()
-	s := Student{"小花", 18, true}
-	c := Class{"1(2)班", []Student{s, s, s}}
 
 	bytearr, err := sonic.Marshal(c) //JSON 序列化
 	if err != nil {
