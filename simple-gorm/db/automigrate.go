@@ -36,6 +36,7 @@ func DoAutoMigrate() {
 	if err != nil {
 		panic(err) // 如果数据库不存在会报错
 	}
+	// 如果表之前存在会修改，但是只会修改之前存在的字段的属性，无法识别删除字段
 	db.AutoMigrate(&Product{}) // 可以加多个
 
 	// 可以通过Set设置附加参数，下面设置表的存储引擎为InnoDB
