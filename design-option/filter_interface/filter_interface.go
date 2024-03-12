@@ -5,6 +5,13 @@ import (
 	"time"
 )
 
+func FilterSlice(data []*Order, opts ...Option) []*Order {
+	for _, opt := range opts {
+		data = opt.Apply(data)
+	}
+	return data
+}
+
 type Order struct {
 	Id        int64
 	OrderId   string
@@ -12,18 +19,6 @@ type Order struct {
 	Roleid    string
 	Ctime     string
 	Productid string
-}
-
-type Option interface {
-	Apply([]*Order) []*Order
-}
-
-type Where struct {
-	Nid      string
-	RoleId   string
-	Ctime    string
-	Etime    string
-	OrderIds []string
 }
 
 func ParseTimeString(input string) (time.Time, error) {
@@ -52,6 +47,18 @@ func ParseTimeString(input string) (time.Time, error) {
 	}
 
 	return parsedTime, nil
+}
+
+type Option interface {
+	Apply([]*Order) []*Order
+}
+
+type Where struct {
+	Nid      string
+	RoleId   string
+	Ctime    string
+	Etime    string
+	OrderIds []string
 }
 
 func (w *Where) Apply(data []*Order) []*Order {
@@ -112,10 +119,48 @@ func (w *Where) Apply(data []*Order) []*Order {
 	return ret
 }
 
-func FilterSlice(data []*Order, opts ...Option) []*Order {
-	ret := make([]*Order, 0)
-	for _, opt := range opts {
-		ret = opt.Apply(data)
+type Page struct {
+	PageNo   int64 //0代表首页
+	PageSize int64 //0代表不分页
+}
+
+func (p *Page) Apply(data []*Order) []*Order {
+	length := len(data)
+	if length == 0 || p.PageSize == 0 {
+		return data
 	}
-	return ret
+	offset := p.PageNo * p.PageSize
+	limit := offset + p.PageSize
+	if limit > int64(length) {
+		limit = int64(length)
+	}
+	if offset > limit {
+		return make([]*Order, 0)
+	}
+	return data[offset:limit]
+}
+
+func Do() {
+	data := make([]*Order, 0)
+	data = append(data,
+		&Order{Id: 1, Nid: "z1", Roleid: "a", Ctime: "2023-01-01", OrderId: "a000"}, //x
+		&Order{Id: 2, Nid: "z3", Roleid: "a", Ctime: "2023-01-01", OrderId: "a000"}, //x
+		&Order{Id: 3, Nid: "z3", Roleid: "b", Ctime: "2023-04-01", OrderId: "a000"}, //x
+		&Order{Id: 4, Nid: "z3", Roleid: "a", Ctime: "2023-04-01", OrderId: "a001"}, //
+		&Order{Id: 5, Nid: "z3", Roleid: "a", Ctime: "2024-01-01", OrderId: "a002"}, //
+		&Order{Id: 6, Nid: "z3", Roleid: "a", Ctime: "2025-01-01", OrderId: "a002"}, //x
+		&Order{Id: 7, Nid: "z3", Roleid: "a", Ctime: "2024-02-01", OrderId: "a003"}, //
+	)
+	res := FilterSlice(data,
+		&Where{Nid: "z3", RoleId: "a", Ctime: "2023-03-05", Etime: "2024-3-5", OrderIds: []string{"a001", "a002", "a003"}},
+		&Page{PageNo: 0, PageSize: 4},
+	)
+
+	// for _, v := range data {
+	// 	fmt.Printf("%#v \n", v)
+	// }
+	// fmt.Println()
+	for _, v := range res {
+		fmt.Printf("%#v \n", v)
+	}
 }
