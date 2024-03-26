@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func FilterSlice(data []*Order, opts ...Option) []*Order {
+func FilterSlice[T any](data []T, opts ...Option[T]) []T {
 	for _, opt := range opts {
 		data = opt.Apply(data)
 	}
@@ -49,8 +49,8 @@ func ParseTimeString(input string) (time.Time, error) {
 	return parsedTime, nil
 }
 
-type Option interface {
-	Apply([]*Order) []*Order
+type Option[T any] interface {
+	Apply([]T) []T
 }
 
 type Where struct {
@@ -119,12 +119,12 @@ func (w *Where) Apply(data []*Order) []*Order {
 	return ret
 }
 
-type Page struct {
+type Page[T any] struct {
 	PageNo   int64 //0代表首页
 	PageSize int64 //0代表不分页
 }
 
-func (p *Page) Apply(data []*Order) []*Order {
+func (p *Page[T]) Apply(data []T) []T {
 	length := len(data)
 	if length == 0 || p.PageSize == 0 {
 		return data
@@ -135,7 +135,7 @@ func (p *Page) Apply(data []*Order) []*Order {
 		limit = int64(length)
 	}
 	if offset > limit {
-		return make([]*Order, 0)
+		return make([]T, 0)
 	}
 	return data[offset:limit]
 }
@@ -151,9 +151,9 @@ func Do() {
 		&Order{Id: 6, Nid: "z3", Roleid: "a", Ctime: "2025-01-01", OrderId: "a002"}, //x
 		&Order{Id: 7, Nid: "z3", Roleid: "a", Ctime: "2024-02-01", OrderId: "a003"}, //
 	)
-	res := FilterSlice(data,
+	res := FilterSlice[*Order](data,
 		&Where{Nid: "z3", RoleId: "a", Ctime: "2023-03-05", Etime: "2024-3-5", OrderIds: []string{"a001", "a002", "a003"}},
-		&Page{PageNo: 0, PageSize: 4},
+		&Page[*Order]{PageNo: 0, PageSize: 4},
 	)
 
 	// for _, v := range data {
